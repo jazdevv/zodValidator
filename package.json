@@ -1,5 +1,5 @@
 {
-  "name": "zod-validator",
+  "name": "@jazdevv/zod-validator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
