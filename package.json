@@ -1,5 +1,5 @@
 {
-  "name": "@simpleboost/zod-validator",
+  "name": "@jazdevv/zod-validator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SimpleBoost/zodValidator.git"
+    "url": "https://github.com/jazdevv/zodValidator"
   },
   "keywords": [
     "zod",
@@ -19,9 +19,9 @@
   "author": "jazdevv",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SimpleBoost/zodValidator/issues"
+    "url": "https://github.com/jazdevv/zodValidator/issues"
   },
-  "homepage": "https://github.com/SimpleBoost/zodValidator#readme",
+  "homepage": "https://github.com/jazdevv/zodValidator#readme",
   "dependencies": {
     "zod": "^3.23.8"
   },
