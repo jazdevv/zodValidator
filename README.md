@@ -221,107 +221,100 @@ Here is a complete example demonstrating how to use the useZodState hook in a Re
     
     function MyFormComponent() {
     
-    const { inputs, error, validate, setValues, setZodSchema } = useZodState({
-    
-    initialValues: {
-    
-    name: '',
-    
-    age: '',
-    
-    },
-    
-    schema: schema,
-    
-    });
-    
-      
-    
-    const handleSubmit = (event) => {
-    
-    event.preventDefault();
-    
-    if (validate()) {
-    
-    console.log('Form data:', inputs);
-    
-    } else {
-    
-    console.log('Validation errors:', error);
-    
-    }
-    
-    };
+        const { inputs, error, validate, setValues, setZodSchema } = useZodState({
+        
+        initialValues: {
+        
+        name: '',
+        
+        age: '',
+        
+        },
+        
+        schema: schema,
+        
+        });
     
       
     
-    const handleChange = (event) => {
-    
-    const { name, value } = event.target;
-    
-    setValues({ [name]: value });
-    
-    };
+        const handleSubmit = (event) => {
+        
+            event.preventDefault();
+        
+            if (validate()) {
+        
+                console.log('Form data:', inputs);
+        
+            } else {
+        
+                console.log('Validation errors:', error);
+        
+            }
+        
+        };
     
       
     
-    return (
+        const handleChange = (event) => {
+        
+            const { name, value } = event.target;
+        
+            setValues({ [name]: value });
+        
+        };
     
-    <form  onSubmit={handleSubmit}>
+      
     
-    <div>
-    
-    <label>
-    
-    Name:
-    
-    <input
-    
-    type="text"
-    
-    name="name"
-    
-    value={inputs.name}
-    
-    onChange={handleChange}
-    
-    />
-    
-    </label>
-    
-    {error.name && <span>{error.name}</span>}
-    
-    </div>
-    
-    <div>
-    
-    <label>
-    
-    Age:
-    
-    <input
-    
-    type="number"
-    
-    name="age"
-    
-    value={inputs.age}
-    
-    onChange={handleChange}
-    
-    />
-    
-    </label>
-    
-    {error.age && <span>{error.age}</span>}
-    
-    </div>
-    
-    <button  type="submit">Submit</button>
-    
-    </form>
-    
-    );
+        return (
+        
+        <form  onSubmit={handleSubmit}>
+        
+            <div>
+            
+                <label> Name: </label>
+                
+                <input
+                
+                    type="text"
+                    
+                    name="name"
+                    
+                    value={inputs.name}
+                    
+                    onChange={handleChange}
+                
+                />
+                
+                {error.name && <span>{error.name}</span>}
+                
+            </div>
+                
+            <div>
+                
+                <label> Age:</label>
+                
+                <input
+                
+                    type="number"
+                    
+                    name="age"
+                    
+                    value={inputs.age}
+                    
+                    onChange={handleChange}
+                
+                />
+                
+                
+                {error.age && <span>{error.age}</span>}
+            
+            </div>
+            
+            <button  type="submit">Submit</button>
+        
+        </form>
+        
+        );
     
     }
     
