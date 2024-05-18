@@ -1,0 +1,31 @@
+{
+  "name": "@simpleboost/zod-validator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimpleBoost/zodValidator.git"
+  },
+  "keywords": [
+    "zod",
+    "zodvalidator",
+    "react",
+    "reactvalidator"
+  ],
+  "author": "jazdevv",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SimpleBoost/zodValidator/issues"
+  },
+  "homepage": "https://github.com/SimpleBoost/zodValidator#readme",
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/jazdevv"
+  }
+}
